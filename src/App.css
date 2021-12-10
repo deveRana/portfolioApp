@@ -1,38 +1,1483 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&family=Poppins&family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Readex Pro', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+*{
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*** NavBar Container ***/
+
+.navBarContainer{
+  width: 100vw; 
+  height: 20vh;
+  background: #e32636f5;
+  display: flex;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftNavBarSide{
+  width: 40%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftNavBarSide span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+
+.rightNavBarSide{
+  width: 60%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightNavBarSide ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.rightNavBarSide ul li{
+  list-style: none;
+}
+
+.rightNavBarSide ul li a{
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: whitesmoke;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rightNavBarSide ul li a:hover{
+  color: rgb(244,194,194);
+}
+
+.homeNav a{
+  color: rgb(244,194,194) !important;
+}
+
+.rightNavBarSide svg{
+  display: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/*** NavBar Container ***/
+
+
+/*** Home Container ***/
+
+.homeContainer{
+  width: 100vw;
+  height: 65vh;
+  background: rgba(227,38,54,0.96);
+  display: flex;
+  flex-direction: row;
+}
+
+.leftHomeSide{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftHomeSide img{
+  width: 320px;
+  height: 320px;
+  border-radius: 150px;
+}
+
+.rightHomeSide{
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.nameDiv p{
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nameDiv p span{
+  font-size: 40px;
+  color: rgb(0,49,83);
+  font-weight: 900;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.professionDiv p{
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: gold;
+  margin: 30px 0;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.introDiv p{
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  word-spacing: 3px;
+}
+
+/*** Home Container ***/
+
+
+/*** About Container ***/
+.aboutContainer{
+  width: 100vw;
+  height: 70vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+
+.upperAboutDiv{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.upperAboutDiv p{
+  font-size: 35px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: black;
+  font-weight: 900;
+  border-bottom: 3px solid #e32636f5;
+}
+
+.lowerAboutDiv{
+  width: 65%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(227, 38, 54, 0.5);
+  border-radius: 5px;
+
+}
+
+.leftAboutDiv{
+  width: 40%;
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;         
+}
+
+.leftAboutDiv img{
+  width: 300px;
+  height: 300px; 
+}
+
+
+.rightAboutDiv{
+  width: 55%;
+  height: 100%;               
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightAboutDiv p{
+  text-align: start;
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+.rightAboutDiv p span{
+  color: #e32636f5;
+  font-weight: 900;
+}
+
+.rightAboutDiv p b{
+  color: sienna;
+}
+
+.rightAboutDiv p a{
+  color: slateblue;
+  font-weight: 900;
+}
+
+/*** About Container ***/
+
+
+/*** Contact Container ***/
+
+.contactContainer{
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.borderContactDiv{
+  width: 1.5vw;
+  height: 100vh;
+  background: #e32636f5;
+}
+
+.mainContactDiv{
+  width: 98.5vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftContactDiv{
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.contactHeadingDiv{
+  margin-left: 50px;
+  width: 55%;
+}
+
+.contactHeadingDiv p{
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.contactInfoDiv{
+  margin-left: 50px;
+  /* width: 90%; */
+}
+
+.contactInfoDiv p{
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contactInfoDiv p svg{
+  color: #e32636f5;
+  margin-right: 10px;
+}
+
+.margin30Px{
+  margin: 30px 0px;
+}
+
+
+.rightContactDiv{
+  width: 55%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contactInputHeading{
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contactInputHeading b{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.contactInputHeading p{
+    font-size: 31px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactInputDiv{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contactInputDiv input{
+  border: none;
+  outline: none;
+  font-size: 23px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  color: black;
+  border-bottom: 2px solid rgba(0, 0, 0,0.5);
+  padding-bottom: 5px;
+}
+
+.contactInputDiv input:focus{
+  border-bottom: 2px solid #e32636f5;
+}
+
+
+.contactTextArea{
+  width: 80%;
+  height: 25vh;
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  outline: none;
+  padding: 5px;
+  color: black;
+}
+
+.contactTextArea:focus {
+  border: 1px solid #e32636f5;
+}
+
+
+.contactButtonDiv{
+  width: 90%;
+  display: flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactButtonDiv button{
+    outline: none;
+    border: none;
+    background: #e32636f5;
+    color: white;
+    font-size: 21px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contactButtonDiv a{
+    text-decoration: none;
+    background: #e32636f5;
+    color: white;
+    font-size: 21px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding: 15px 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** Contact Container ***/
+
+/*** Skill Container ***/
+
+.skillContainer{
+  width: 100vw;
+  height: 90vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.upperSkillContainer{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperSkillContainer p{
+  font-size: 35px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: black;
+  font-weight: 900;
+  border-bottom: 3px solid #e32636f5;
+}
+
+.innerSkillContainer{
+    width: 70vw;
+    height: 70vh;
+    background: #e32636f5;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.skillDiv{
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 110px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0,0.5);
+  
+}
+
+.skillDiv:hover{
+  animation-name: rotateDiv;
+  animation-duration: 3s;
+}
+
+@keyframes rotateDiv {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+
+
+.skillImgDiv{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillImgDiv img{
+  width: 50px;
+}
+
+.mongoImg img{
+  width: 25px ;
+}
+
+
+.skillHeadingDiv{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillHeadingDiv p{
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: black;
+}
+
+/*** Skill Container ***/
+
+
+/*** Project Container ***/
+
+.projectContainer{
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.leftProjectSide{
+  width: 30vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectHeadingDiv{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.projectHeadingDiv p{
+  font-size: 35px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: black;
+  font-weight: 900;
+  border-bottom: 3px solid #e32636f5;
+}
+
+
+
+.projectListDiv{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.projectListDiv p{
+  font-size: 21px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: black;
+  margin-left: 8vw;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.activeProjectList{
+  color: white !important;
+  background: #e32636f5;
+}
+
+
+.rightProjectSide{
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImageContainer{
+  width: 65vw;
+  height: 80vh;
+  background: #e32636f5;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImageContainer img{
+  width: 800px;
+  border-radius: 30px;
+  border: 5px solid white;
+  padding: 7px;
+}
+
+
+/*** Project Container ***/
+
+
+
+
+
+
+
+
+
+/* ************************ */
+/* ************************ */
+
+
+
+/***** Responsive For Mobile 1000px ****/
+
+@media (max-width:1000px) {
+  
+  .leftNavBarSide span {
+    font-size: 45px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .rightNavBarSide ul li a {
+    font-size: 20px;
+  }
+  .introDiv p {
+    text-align: center;
+  }
+
+      
+
+
+    .nameDiv p{
+      font-size: 20px;
+    }
+
+    .nameDiv p span{
+      font-size: 25px;
+    }
+
+    .professionDiv p{
+      font-size: 30px;
+    }
+
+    .introDiv p{
+      font-size: 20px;
+    }
+
+    .upperAboutDiv {
+      width: 100%;
+      height: 15%;
+    }
+
+    .lowerAboutDiv {
+      width: 80%;
+      height: 85%;
+    }
+
+    .rightAboutDiv p {
+      text-align: start;
+      font-size: 17px;
+    }
+
+    .skillDiv {
+      width: 100px;
+      height: 90px;
+    }
+
+    .projectHeadingDiv p {
+      font-size: 30px;
+    }
+
+    .projectListDiv p {
+      font-size: 19px;
+    }
+
+    .projectImageContainer img {
+      width: 500px;
+    } 
+
+    .contactHeadingDiv p {
+      font-size: 40px;
+    }
+
+    .contactInfoDiv p {
+      font-size: 20px;
+    }
+
+    .contactInputHeading p {
+      font-size: 28px;
+    }
+
+    .contactInputDiv input {
+      font-size: 21px
+    }
+
+    .contactTextArea {
+      height: 23vh;
+    }
+
+} 
+
+
+
+/***** Responsive For Mobile 1000px ****/
+
+
+
+
+/***** Responsive For Mobile 875px ****/
+
+@media (max-width:850px) {
+
+  .rightNavBarSide ul li a {
+    font-size: 18px;
+  }
+
+}
+
+/***** Responsive For Mobile 875px ****/
+
+
+/***** Responsive For Mobile 800px ****/
+
+@media (max-width:800px) {
+
+  .rightNavBarSide ul li a {
+    font-size: 16px;
+  }
+
+  .leftNavBarSide span {
+    font-size: 40px;
+  }
+
+  .leftHomeSide img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .rightAboutDiv p {
+    font-size: 15px;
+  }
+
+  .skillDiv {
+    width: 90px;
+    height: 80px;
+    margin-left: 40px;
+  }
+
+  .skillHeadingDiv p {
+    font-size: 13px;
+  }
+
+  .projectHeadingDiv p {
+    font-size: 27px;
+  }
+
+  .projectListDiv p {
+    font-size: 17px;
+  }
+
+  .projectImageContainer img {
+    width: 449px;
+    height: 250px;
+  } 
+
+  .mainContactDiv {
+    flex-direction: column;
+  }
+  
+  .leftContactDiv {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .contactHeadingDiv{
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contactInfoDiv{
+    width: 60%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .rightContactDiv {
+    width: 100%;
+    height: 100vh;
+  }
+  
+
+  .contactHeadingDiv p {
+    font-size: 30px;
+    margin-left: 30px;
+  }
+
+  .contactInfoDiv p {
+    font-size: 16px;
+  }
+
+  .contactInputHeading p {
+    font-size: 23px;
+  }
+
+  .contactInputDiv input {
+    font-size: 18px
+  }
+
+  .contactTextArea {
+    height: 23vh;
+  }
+
+
+}
+
+
+/***** Responsive For Mobile 800px ****/
+
+
+/***** Responsive For Mobile 700px ****/
+@media (max-width:750px) {
+  
+  .rightNavBarSide ul li a {
+    font-size: 11px;
+  }
+
+
+}
+/***** Responsive For Mobile 700px ****/
+
+
+
+
+
+
+/* ************************ */
+/* ************************ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** Responsive For Mobile ****/
+
+@media (max-width:600px) {
+  
+  /***** Navbar Container ****/
+
+  .leftNavBarSide {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightNavBarSide {
+    width: 30%;
+  }
+  .rightNavBarSide ul{
+    display: none;
+  }
+  .rightNavBarSide svg{
+    display: block;
+  }
+
+  
+/***** Navbar Container ****/
+
+
+/***** Home Container ****/
+
+.homeContainer {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(227,38,54,0.96);
+  display: flex;
+  flex-direction: column;
+}
+
+.leftHomeSide {
+  height: 50%;
+  width: 100%;
+}
+
+.rightHomeSide {
+  height: 50%;
+  width: 100%;
+}
+
+.leftHomeSide img {
+  width: 250px;
+  height: 250px;
+}
+
+.nameDiv p{
+  font-size: 21px;
+}
+
+.professionDiv p{
+  font-size: 40px;
+}
+
+.introDiv p{
+  font-size: 21px;
+}
+
+
+/***** Home Container ****/
+
+
+
+/***** About Container ****/
+
+.aboutContainer{
+  height: 90vh;
+}
+
+.lowerAboutDiv {
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.leftAboutDiv {
+  height: 45%;
+  width: 100%;
+}
+
+.leftAboutDiv img {
+  width: 200px;
+  height: 200px;
+}
+
+.rightAboutDiv {
+  height: 55%;
+  width: 100%;
+}
+
+.rightAboutDiv p {
+  font-size: 15px;
+  padding: 0px 35px;
+}
+/***** About Container ****/
+
+
+
+/***** Skill Container ****/
+.skillContainer {
+  width: 100vw;
+  height: 115vh;
+}
+
+.innerSkillContainer {
+  width: 70vw;
+  height: 100vh;
+  grid-template-columns: auto auto ;
+}
+
+/***** Skill Container ****/
+
+
+/***** Contact Container ****/
+
+.mainContactDiv {
+  flex-direction: column;
+}
+
+.leftContactDiv {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contactHeadingDiv{
+  width: 40%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactInfoDiv{
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.contactHeadingDiv p {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.contactInfoDiv p {
+  font-size: 15px;
+}
+
+.rightContactDiv {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactInputHeading p {
+  font-size: 21px;
+}
+.contactInputDiv input {
+  font-size: 15px;
+}
+
+.contactTextArea {
+  width: 90%;
+  height: 12vh;
+  font-size: 17px;
+}
+
+.contactButtonDiv {
+  margin-bottom: 30px;
+}
+
+.contactButtonDiv button {
+  font-size: 17px;
+}
+
+.contactButtonDiv a {
+  font-size: 17px;
+}
+
+/***** Contact Container ****/
+
+
+
+/***** Project Container ****/
+
+.projectContainer {
+  flex-direction: column; 
+}
+
+.leftProjectSide {
+  height: 30vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectHeadingDiv {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectListDiv {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.projectListDiv p {
+  font-size: 11px;
+  margin: 0;
+}
+
+
+.rightProjectSide {
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.projectImageContainer img {
+  width: 450px;
+}
+
+/***** Project Container ****/
+
+
+
+
+}
+/***** Responsive For Mobile ****/
+
+
+
+
+/***** Responsive For Mobile 450px ****/
+
+@media (max-width:450px) {
+  
+/***** Home Container ****/
+
+
+
+
+.nameDiv p{
+  font-size: 17px;
+}
+
+.nameDiv p span{
+  font-size: 25px;
+}
+
+.professionDiv p{
+  font-size: 30px;
+}
+
+.introDiv p{
+  font-size: 16px;
+}
+
+
+/***** Home Container ****/
+
+
+/***** About Container ****/
+.aboutContainer {
+  height: 100vh;
+}
+.upperAboutDiv {
+  width: 100%;
+  height: 15%;
+}
+
+.lowerAboutDiv {
+  width: 80%;
+  height: 85%;
+}
+
+.leftAboutDiv img {
+  width: 150px;
+  height: 150px;
+}
+
+.rightAboutDiv p {
+  font-size: 14px;
+}
+
+.leftAboutDiv {
+  height: 35%;
+}
+
+.rightAboutDiv {
+  height: 65%;
+}
+
+
+/***** About Container ****/
+
+
+/***** Skill Container ****/
+
+.skillContainer {
+  height: 135vh;
+}
+
+.innerSkillContainer {
+  width: 70vw;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skillDiv {
+  margin: 0;
+  width: 170px;
+  height: 55px;
+  flex-direction: row;
+  border-radius: 100px;
+}
+
+.skillImgDiv {
+  width: 50%;
+  height: 100%;
+}
+.skillHeadingDiv {
+  width: 50%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+
+/***** Skill Container ****/
+
+/***** Project Container ****/
+.projectImageContainer img {
+  width: 360px;
+}
+/***** Project Container ****/
+
+
+
+/***** Contact Container ****/
+
+.contactHeadingDiv p {
+  font-size: 27px;
+}
+
+.contactInfoDiv p {
+  font-size: 13px;
+}
+
+.contactInputHeading p {
+  font-size: 17px;
+}
+
+.contactInputDiv input {
+  font-size: 13px;
+}
+
+.contactTextArea {
+  height: 10vh;
+  font-size: 15px;
+}
+
+.contactButtonDiv button {
+  font-size: 15px;
+}
+.contactButtonDiv a {
+  font-size: 15px;
+}
+
+/***** Contact Container ****/
+
+
+}
+
+/***** Responsive For Mobile 450px ****/
+
+
+/***** Responsive For Mobile 425px ****/
+
+@media (max-width:425px) {
+  .contactInfoDiv p {
+    font-size: 12px;
+  }
+  
+}
+
+/***** Responsive For Mobile 425px ****/
+
+
+/***** Responsive For Mobile 400px ****/
+
+@media (max-width:400px) {
+
+  .leftNavBarSide span {
+    font-size: 40px;
+  }
+  .rightNavBarSide svg {
+    font-size: 25px;
+  }
+
+  .leftHomeSide img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .professionDiv p {
+    font-size: 27px;
+  }
+  .introDiv p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .rightAboutDiv p {
+    font-size: 13px;
+  }
+  .skillDiv {
+    width: 130px;
+    height: 40px;
+  }
+  .skillImgDiv img {
+    width: 40px;
+  }
+  .mongoImg img {
+    width: 15px;
+  }
+  .skillHeadingDiv p {
+    font-size: 13px;
+  }
+  .projectListDiv p {
+    font-size: 9px;
+    margin: 0;
+  }
+
+  .projectContainer {
+    height: 125vh;
+  }
+
+  .leftProjectSide {
+    height: 25vh;
+  }
+    
+  .rightProjectSide {
+    width: 125vw;
+    height: 100vh;
+  }
+
+  .projectImageContainer{
+    transform: rotate(90deg);
+  }
+
+  .projectImageContainer {
+    height: 350px;
+    width: 100%;
+  }
+
+  .projectImageContainer img {
+    height: 65%;
+    width: 85%;
+  }
+
+  .contactHeadingDiv p {
+    font-size: 25px;
+  }
+
+  .contactInfoDiv p {
+    font-size: 11px;
+  }
+
+  .contactInputHeading p {
+    font-size: 15px;
+  }
+
+  .contactButtonDiv button {
+    font-size: 13px;
+  }
+
+  .contactButtonDiv a {
+    font-size: 18px;
+    padding: 10px 10px;
+  }
+
+  .contactInputDiv input {
+    font-size: 11px;
+  }
+
+  .margin30Px {
+    margin: 25px 0px;
+  }
+  
+}
+
+/***** Responsive For Mobile 400px ****/
+
+
+/***** Responsive For Mobile 375px ****/
+
+@media (max-width:375px) {
+  .projectImageContainer {
+    height: 325px;
+    width: 100%;
   }
 }
+
+/***** Responsive For Mobile 375px ****/
+
+
+
+
+/***** Responsive For Mobile 350px ****/
+
+
+@media (max-width:350px) {
+  
+
+  .projectContainer {
+    height: 135vh;
+  }
+
+  .leftProjectSide {
+    height: 35vh;
+  }
+    
+  .rightProjectSide {
+    width: 125vw;
+    height: 100vh;
+  }
+
+  .projectHeadingDiv {
+    width: 100%;
+    height: 40%;
+  }
+  .projectListDiv {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .projectImageContainer {
+    height: 300px;
+    width: 100%;
+  }
+
+  .contactHeadingDiv p {
+    font-size: 22px;
+  }
+
+  .contactInfoDiv p {
+    font-size: 9.5px;
+  }
+
+  .contactInputHeading p {
+    font-size: 14px;
+  }
+
+  .contactButtonDiv button {
+    font-size: 11px;
+  }
+
+  .contactButtonDiv a {
+    font-size: 11px;
+  }
+
+  .contactInputDiv input {
+    font-size: 10px;
+  }
+  .margin30Px {
+    margin: 23px 0px;
+  }
+
+}
+
+/***** Responsive For Mobile 350px ****/
